@@ -1,15 +1,12 @@
-<pre>
 <?php 
 
 include('./asset/php/db.php');
   
 ?>
 
-</pre>
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,39 +14,49 @@ include('./asset/php/db.php');
     <link rel="stylesheet" href="./asset/css/style.css">
     <title>Google answer</title>
 </head>
+
 <body>
 
 
-<div class="container">
+    <div class="container">
 
-<header>
-    <div class="logo">
-        <img src="./asset/img/googlepng.png" alt="google logo">
-    </div>
-    <span>Privacy & Termini </span>
-</header>
-<div class="navbar">
-   
- </div>
+        <header>
+            <div class="header-cont">
+                <div class="logo">
+                    <a href="https://www.google.it/"><img src="./asset/img/googlepng.png" alt="google logo"></a>
+                </div>
+                <span>Privacy & Termini </span>
+            </div>
+            <div class="navbar">
+                <div class="links">
+                    <div class="link-cont"><a href="#">Introduzione</a> </div>
+                    <div class="link-cont"> <a href="#">Norme sulla privacy</a></div>
+                    <div class="link-cont"> <a href="#">Termini di servizio</a></div>
+                    <div class="link-cont"> <a href="#">Tecnologie</a></div>
+                    <div class="link-cont"> <a href="#">Domande frequenti</a></div>
+                </div>
+            </div>
+        </header>
 
 
 
 
 
-    
-    <div class="dataset">
-        <?php foreach ($dataset as $data_el) {
-            foreach ($data_el as $key => $value) { ?>
 
-                <p class="domanda"><?=  $data_el[$key];   ?></p>
-                <p class="risposta"><?=  $data_el[$value];   ?></p>
 
-        <?php       
-            }    
-        }
+        <div class="dataset">
+            <?php foreach ($dataset as $data_el) { ?>
+
+            <p class="domanda"><?php echo  $data_el['question'];   ?></p>
+            <p class="risposta"><?php echo $data_el['answer'];   ?></p>
+
+            <?php       
+           
+        };
         ?>
 
+        </div>
     </div>
-</div>
 </body>
+
 </html>
