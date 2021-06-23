@@ -1,20 +1,18 @@
-<?php
+<pre>
+<?php 
+
+include('./asset/php/db.php');
+ 
 
 
-
-
-$set=include('db.php');
-
-if($set){
-    echo "ok";
-}else{
-    echo "Ko";
-}
-
-
-
-
+  
 ?>
+
+</pre>
+
+
+
+
 
 
 
@@ -28,5 +26,20 @@ if($set){
 </head>
 <body>
     
+<div class="dataset">
+    <?php foreach ($dataset as $data_el) {
+        foreach ($data_el as $key => $value) { ?>
+
+            <p><?=  $key;   ?></p>
+            <p><?=  $value;   ?></p>
+
+            
+
+    <?php       
+        }    
+    }
+    ?>
+
+</div>
 </body>
 </html>
