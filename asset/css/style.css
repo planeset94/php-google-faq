@@ -19,30 +19,39 @@ header{
 }
 
 .logo{
-    width: 80px;
-    height: 30px;
+    
     padding-right: 1rem;
 }
 
 .logo img{
-    height: 100%;
-    width: 100%;
+  width: 70px;
 }
 
 span{
     font-size: 1.3rem;
 }
  /* NAVBAR  */
+ .header-cont, .navbar{
+     padding: 0 0.5rem;
+    
+ }
 
  .navbar{
      border-bottom: 1px solid black;
-     padding:0 0.5rem 0.1rem;
+ 
  }
 .links{
     width: 45%;
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
+}
+
+.link-cont{
+    padding-right: 10px;
+}
+.link-cont:first-of-type{
+    padding-left: 4px;
 }
 
 .links a{
